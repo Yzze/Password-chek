@@ -32,4 +32,13 @@ class UiElements {
        indicator.translatesAutoresizingMaskIntoConstraints = false
        return indicator
    }()
+    
+    let button: UIButton = {
+       let button = UIButton()
+       button.backgroundColor = .red
+       button.tintColor = .black
+       button.setTitle("Start", for: .normal)
+       button.translatesAutoresizingMaskIntoConstraints = false
+       return button
+   }()
 }
