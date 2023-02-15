@@ -25,4 +25,11 @@ class UiElements {
        textField.translatesAutoresizingMaskIntoConstraints = false
        return textField
    }()
+    
+    let indicator: UIActivityIndicatorView = {
+       let indicator = UIActivityIndicatorView()
+       indicator.style = .medium
+       indicator.translatesAutoresizingMaskIntoConstraints = false
+       return indicator
+   }()
 }
