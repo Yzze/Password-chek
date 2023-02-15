@@ -9,6 +9,11 @@ import UIKit
 
 class PasswordViewController: UIViewController {
 
+    let button = UiElements().label
+    let textField = UiElements().textField
+    let label = UiElements().indicator
+    let indicator = UiElements().button
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
