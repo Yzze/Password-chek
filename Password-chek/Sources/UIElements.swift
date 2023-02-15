@@ -38,6 +38,8 @@ class UiElements {
        button.backgroundColor = .red
        button.tintColor = .black
        button.setTitle("Start", for: .normal)
+       button.addTarget(.none, action: #selector(PasswordViewController.buttonPressed),
+                        for: .touchUpInside)
        button.translatesAutoresizingMaskIntoConstraints = false
        return button
    }()
