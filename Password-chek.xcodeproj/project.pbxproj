@@ -9,20 +9,16 @@
 /* Begin PBXBuildFile section */
 		2C2480E7299D5D3400D5C65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2480E6299D5D3400D5C65F /* AppDelegate.swift */; };
 		2C2480E9299D5D3400D5C65F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2480E8299D5D3400D5C65F /* SceneDelegate.swift */; };
-		2C2480EB299D5D3400D5C65F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2480EA299D5D3400D5C65F /* ViewController.swift */; };
-		2C2480EE299D5D3400D5C65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2480EC299D5D3400D5C65F /* Main.storyboard */; };
+		2C2480EB299D5D3400D5C65F /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2480EA299D5D3400D5C65F /* PasswordViewController.swift */; };
 		2C2480F0299D5D3500D5C65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2480EF299D5D3500D5C65F /* Assets.xcassets */; };
-		2C2480F3299D5D3500D5C65F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C2480F1299D5D3500D5C65F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C2480E3299D5D3400D5C65F /* Password-chek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password-chek.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2480E6299D5D3400D5C65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C2480E8299D5D3400D5C65F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C2480EA299D5D3400D5C65F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2C2480ED299D5D3400D5C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2C2480EA299D5D3400D5C65F /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		2C2480EF299D5D3500D5C65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C2480F2299D5D3500D5C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C2480F4299D5D3500D5C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,15 +52,37 @@
 		2C2480E5299D5D3400D5C65F /* Password-chek */ = {
 			isa = PBXGroup;
 			children = (
-				2C2480E6299D5D3400D5C65F /* AppDelegate.swift */,
-				2C2480E8299D5D3400D5C65F /* SceneDelegate.swift */,
-				2C2480EA299D5D3400D5C65F /* ViewController.swift */,
-				2C2480EC299D5D3400D5C65F /* Main.storyboard */,
-				2C2480EF299D5D3500D5C65F /* Assets.xcassets */,
-				2C2480F1299D5D3500D5C65F /* LaunchScreen.storyboard */,
-				2C2480F4299D5D3500D5C65F /* Info.plist */,
+				2C2480FA299D5DF100D5C65F /* App */,
+				2C2480FB299D5E0100D5C65F /* Sources */,
+				2C2480FC299D5E1100D5C65F /* Resources */,
 			);
 			path = "Password-chek";
+			sourceTree = "<group>";
+		};
+		2C2480FA299D5DF100D5C65F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2C2480E8299D5D3400D5C65F /* SceneDelegate.swift */,
+				2C2480E6299D5D3400D5C65F /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2C2480FB299D5E0100D5C65F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2C2480EA299D5D3400D5C65F /* PasswordViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2C2480FC299D5E1100D5C65F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C2480EF299D5D3500D5C65F /* Assets.xcassets */,
+				2C2480F4299D5D3500D5C65F /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C2480F3299D5D3500D5C65F /* LaunchScreen.storyboard in Resources */,
 				2C2480F0299D5D3500D5C65F /* Assets.xcassets in Resources */,
-				2C2480EE299D5D3400D5C65F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C2480EB299D5D3400D5C65F /* ViewController.swift in Sources */,
+				2C2480EB299D5D3400D5C65F /* PasswordViewController.swift in Sources */,
 				2C2480E7299D5D3400D5C65F /* AppDelegate.swift in Sources */,
 				2C2480E9299D5D3400D5C65F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2C2480EC299D5D3400D5C65F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C2480ED299D5D3400D5C65F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2C2480F1299D5D3500D5C65F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C2480F2299D5D3500D5C65F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C2480F5299D5D3500D5C65F /* Debug */ = {
@@ -289,10 +286,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4K388KFZKH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Password-chek/Info.plist";
+				INFOPLIST_FILE = "Password-chek/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +313,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4K388KFZKH;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Password-chek/Info.plist";
+				INFOPLIST_FILE = "Password-chek/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
