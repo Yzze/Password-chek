@@ -9,21 +9,25 @@ import UIKit
 
 class UiElements {
     let label: UILabel = {
-       let label = UILabel()
-       label.backgroundColor = .blue
-       label.textColor = .white
-       label.textAlignment = .center
-       label.translatesAutoresizingMaskIntoConstraints = false
-       return label
+        let label = UILabel()
+        label.backgroundColor = .blue
+        label.textColor = .white
+        label.textAlignment = .center
+        label.clipsToBounds = true
+        label.layer.cornerRadius = 15
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     let textField: UITextField = {
-       let textField = UITextField()
-       textField.backgroundColor = .green
-       textField.textAlignment = .center
-       textField.isSecureTextEntry = true
-       textField.translatesAutoresizingMaskIntoConstraints = false
-       return textField
+        let textField = UITextField()
+        textField.backgroundColor = .green
+        textField.textAlignment = .center
+        textField.isSecureTextEntry = true
+        textField.clipsToBounds = true
+        textField.layer.cornerRadius = 15
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
    }()
     
     let indicator: UIActivityIndicatorView = {
@@ -34,14 +38,15 @@ class UiElements {
    }()
     
     let button: UIButton = {
-       let button = UIButton()
-       button.backgroundColor = .red
-       button.tintColor = .black
-       button.setTitle("Start", for: .normal)
-       button.addTarget(.none, action: #selector(PasswordViewController.buttonPressed),
+        let button = UIButton()
+        button.backgroundColor = .red
+        button.setTitle("Start", for: .normal)
+        button.addTarget(.none, action: #selector(PasswordViewController.buttonPressed),
                         for: .touchUpInside)
-       button.translatesAutoresizingMaskIntoConstraints = false
-       return button
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 15
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
    }()
 }
 

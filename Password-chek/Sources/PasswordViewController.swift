@@ -16,8 +16,57 @@ class PasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewSettings()
+        setupHierarchy()
+        setupLayout()
+    }
+    
+    private func setupViewSettings() {
+        view.backgroundColor = .white
+    }
+    
+    private func setupHierarchy() {
+        view.addSubview(button)
+        view.addSubview(textField)
+        view.addSubview(label)
+        view.addSubview(indicator)
+    }
+    
+    private func setupLayout() {
+        NSLayoutConstraint.activate([
+            button.topAnchor.constraint(equalTo: view.topAnchor, constant: 450),
+            button.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -150),
+            button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -350),
+            button.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 150),
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 350),
+            textField.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -80),
+            textField.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -450),
+            textField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 80),
+            textField.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 250),
+            label.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -120),
+            label.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -550),
+            label.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 120),
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            indicator.topAnchor.constraint(equalTo: view.topAnchor, constant: 395),
+            indicator.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -80),
+            indicator.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -405),
+            indicator.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 80),
+        ])
     }
 
+    // MARK: UI Action
+    
     @objc func buttonPressed() {
         DispatchQueue.main.async {
             self.indicator.startAnimating()
@@ -41,5 +90,4 @@ class PasswordViewController: UIViewController {
             bruteForce(passwordToUnlock: self.textField.text ?? "")
         }
     }
-
 }
