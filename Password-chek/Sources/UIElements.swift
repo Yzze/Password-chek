@@ -16,4 +16,13 @@ class UiElements {
        label.translatesAutoresizingMaskIntoConstraints = false
        return label
     }()
+    
+    let textField: UITextField = {
+       let textField = UITextField()
+       textField.backgroundColor = .green
+       textField.textAlignment = .center
+       textField.isSecureTextEntry = true
+       textField.translatesAutoresizingMaskIntoConstraints = false
+       return textField
+   }()
 }
