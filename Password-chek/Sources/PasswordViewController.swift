@@ -74,10 +74,10 @@ class PasswordViewController: UIViewController {
         
         DispatchQueue.global(qos: .background).async {
             func bruteForce(passwordToUnlock: String) {
-                let ALLOWED_CHARACTERS:   [String] = String().printable.map { String($0) }
+                let allowedCharacters: [String] = String().printable.map { String($0) }
                 var password: String = ""
                 while password != passwordToUnlock {
-                    password = generateBruteForce(password, fromArray: ALLOWED_CHARACTERS)
+                    password = generateBruteForce(password, fromArray: allowedCharacters)
                     print(password)
                 }
                 print(password)
