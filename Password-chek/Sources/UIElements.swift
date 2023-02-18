@@ -51,7 +51,7 @@ class UiElements {
 }
 
 func indexOf(character: Character, _ array: [String]) -> Int {
-    return array.firstIndex(of: String(character))!
+    return array.firstIndex(of: String(character)) ?? 0
 }
 
 func characterAt(index: Int, _ array: [String]) -> Character {
@@ -60,19 +60,18 @@ func characterAt(index: Int, _ array: [String]) -> Character {
 }
 
 func generateBruteForce(_ string: String, fromArray array: [String]) -> String {
-    var str: String = string
+    var enteredPass: String = string
 
-    if str.count <= 0 {
-        str.append(characterAt(index: 0, array))
+    if enteredPass.count <= 0 {
+        enteredPass.append(characterAt(index: 0, array))
     }
     else {
-        str.replace(at: str.count - 1,
-                    with: characterAt(index: (indexOf(character: str.last!, array) + 1) % array.count, array))
+        enteredPass.replace(at: enteredPass.count - 1,
+                    with: characterAt(index: (indexOf(character: enteredPass.last ?? "0", array) + 1) % array.count, array))
 
-        if indexOf(character: str.last!, array) == 0 {
-            str = String(generateBruteForce(String(str.dropLast()), fromArray: array)) + String(str.last!)
+        if indexOf(character: enteredPass.last ?? "0", array) == 0 {
+            enteredPass = String(generateBruteForce(String(enteredPass.dropLast()), fromArray: array)) + String(enteredPass.last ?? "0")
         }
     }
-
-    return str
+    return enteredPass
 }
